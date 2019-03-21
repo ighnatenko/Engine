@@ -11,5 +11,9 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require activestorage
+//= require turbolinks
+//= require jquery
+//= require bootstrap-sprockets
+//= require shopping_cart/checkout_address
+//= require shopping_cart/checkout_delivery
 //= require_tree .

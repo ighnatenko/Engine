@@ -1,31 +1,53 @@
-$:.push File.expand_path("lib", __dir__)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
-require "shopping_cart/version"
+require 'shopping_cart/version'
 
 # Describe your gem and declare its dependencies:
-Gem::Specification.new do |spec|
-  spec.name        = "shopping_cart"
-  spec.version     = ShoppingCart::VERSION
-  spec.authors     = ["ighnatenko"]
-  spec.email       = ["ighnatenko@meta.ua"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of ShoppingCart."
-  spec.description = "TODO: Description of ShoppingCart."
-  spec.license     = "MIT"
+Gem::Specification.new do |s|
+  s.name        = 'shopping_cart'
+  s.version     = ShoppingCart::VERSION
+  s.authors     = ['ighnatenko']
+  s.email       = ['ighnatenko@meta.ua']
+  s.homepage    = 'https://bookstore-x.herokuapp.com'
+  s.summary     = 'Summary of ShoppingCart.'
+  s.description = 'Description of ShoppingCart.'
+  s.license     = 'MIT'
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.test_files = Dir['spec/**/*']
 
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.add_dependency 'aasm', '~> 4.12', '>= 4.12.3'
+  s.add_dependency 'bootstrap-sass', '~> 3.3.7'
+  s.add_dependency 'cancancan', '~> 2.0'
+  s.add_dependency 'coffee-rails', '~> 4.2'
+  s.add_dependency 'country_select'
+  s.add_dependency 'devise'
+  s.add_dependency 'draper', '~> 3.0', '>= 3.0.1'
+  s.add_dependency 'font-awesome-rails'
+  s.add_dependency 'haml'
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'letter_opener'
+  s.add_dependency 'pg', '~> 0.18'
+  s.add_dependency 'rails', '~> 5.2.0'
+  s.add_dependency 'rails-i18n'
+  s.add_dependency 'rectify'
+  s.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.7'
+  s.add_dependency 'simple_form'
+  s.add_dependency 'turbolinks', '~> 5'
+  s.add_dependency 'wicked'
 
-  spec.add_dependency "rails", "~> 5.2.2", ">= 5.2.2.1"
+  s.add_dependency 'capybara', '~> 3.0', '>= 3.0.2'
+  s.add_dependency 'wisper-rspec'
+  s.add_dependency 'database_cleaner', '~> 1.6', '>= 1.6.2'
+  s.add_dependency 'factory_bot_rails'
+  s.add_dependency 'faker', '~> 1.6', '>= 1.6.3'
+  s.add_dependency 'pry', '~> 0.11.3'
+  s.add_dependency 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
+  s.add_dependency 'rspec-rails', '~> 3.7'
+  s.add_dependency 'shoulda-matchers', '~> 3.1'
 
-  spec.add_development_dependency "sqlite3"
+  # s.add_dependency 'selenium-webdriver'
+
+  s.add_dependency 'spring-commands-rspec'
 end

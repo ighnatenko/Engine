@@ -1,0 +1,14 @@
+.row
+  .col-sm-6
+    %h1.mt-res-0= @book.title
+    .row
+      .col-xs-12.col-md-4
+        %p.h1.in-gold-500.mt-10= "€#{@book.price}"
+      = simple_form_for :items, url: shopping_cart.cart_item_path, method: :post do |f|  
+        .col-xs-5.col-md-3
+          .input-group.general-position
+            = f.input :quantity, input_html: { class: 'quantity-input', value: 1 }, label: false, wrapper: false, as: :string
+            = f.hidden_field :book_id, value: @book.id
+            = f.hidden_field :price, value: @book.price    
+        .col-xs-7.col-md-5
+          = f.button :submit, id: 'add_button', value: t('books.add_to_cart'), class: 'pull-right general-position'
