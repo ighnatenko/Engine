@@ -9,11 +9,11 @@ FactoryBot.define do
     phone { Faker::PhoneNumber.phone_number }
 
     trait :shipping do
-      address_type :shipping
+      address_type { :shipping }
     end
 
     trait :billing do
-      address_type :billing
+      address_type { :billing }
     end
   end
 end

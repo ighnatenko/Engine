@@ -1,14 +1,8 @@
-# ShoppingCart
-Short description and motivation.
-
-## Usage
-How to use my plugin.
-
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'shopping_cart'
+gem 'shopping_cart', git: 'https://github.com/ighnatenko/Engine.git', branch: 'develop'
 ```
 
 And then execute:
@@ -16,9 +10,9 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
+Example:
 ```bash
-$ gem install shopping_cart
+https://github.com/ighnatenko/BookStore/tree/shopping_cart
 ```
 
 Run to install:

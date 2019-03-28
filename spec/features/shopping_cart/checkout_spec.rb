@@ -112,7 +112,7 @@ RSpec.feature 'Checkout', type: :feature do
 
     scenario 'confirming' do
       find('.btn.btn-default.mb-20.conf').click
-      expect(page).to have_content(I18n.t('checkout.thank_for_order'))
+      expect(page).to have_content('Thank You for your Order!')
     end
   end
 end

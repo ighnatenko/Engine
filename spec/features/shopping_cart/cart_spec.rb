@@ -20,6 +20,6 @@ RSpec.feature 'Cart', type: :feature do
     stup_current_order(order)
     visit shopping_cart.cart_path
 
-    expect(page).to have_content(I18n.t('cart.empty_cart'))
+    expect(page).to have_content('Empty cart')
   end
 end

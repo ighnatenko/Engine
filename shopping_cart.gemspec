@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'aasm', '~> 4.12', '>= 4.12.3'
-  s.add_dependency 'bootstrap-sass', '~> 3.3.7'
+  s.add_dependency 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
   s.add_dependency 'cancancan', '~> 2.0'
   s.add_dependency 'coffee-rails', '~> 4.2'
   s.add_dependency 'country_select'
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'haml'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'letter_opener'
-  s.add_dependency 'pg', '~> 0.18'
+  s.add_dependency 'pg', '~> 1.1', '>= 1.1.4'
   s.add_dependency 'rails', '~> 5.2.0'
   s.add_dependency 'rails-i18n'
   s.add_dependency 'rectify'
@@ -39,15 +39,12 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'capybara', '~> 3.0', '>= 3.0.2'
   s.add_dependency 'wisper-rspec'
-  s.add_dependency 'database_cleaner', '~> 1.6', '>= 1.6.2'
+  s.add_dependency 'database_cleaner', '~> 1.7'
   s.add_dependency 'factory_bot_rails'
   s.add_dependency 'faker', '~> 1.6', '>= 1.6.3'
   s.add_dependency 'pry', '~> 0.11.3'
   s.add_dependency 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   s.add_dependency 'rspec-rails', '~> 3.7'
   s.add_dependency 'shoulda-matchers', '~> 3.1'
-
-  # s.add_dependency 'selenium-webdriver'
-
   s.add_dependency 'spring-commands-rspec'
 end

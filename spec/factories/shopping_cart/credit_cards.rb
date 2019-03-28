@@ -4,6 +4,5 @@ FactoryBot.define do
     cvv { rand(111..999) }
     expiration_date { "#{rand(10..99)}/#{rand(10..99)}" }
     card_name { 'Test name' }
-    order nil
   end
 end

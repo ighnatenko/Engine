@@ -6,10 +6,6 @@ require 'shoulda/matchers'
 require 'capybara/rails'
 require 'capybara/rspec'
 
-RSpec.configure do |config|
-  config.include Capybara::DSL
-end
-
 Capybara.ignore_hidden_elements = false
 
 ENGINE_ROOT = File.join(File.dirname(__FILE__), '../')
@@ -29,16 +25,13 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-
+  
   config.include FactoryBot::Syntax::Methods
   config.include Rectify::RSpec::Helpers
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include FeatureHelper, type: :feature
-
-  config.after(:each, type: :feature) do
-    Warden.test_reset!
-  end
+  config.include I18n
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
@@ -56,5 +49,9 @@ RSpec.configure do |config|
       with.test_framework :rspec
       with.library :rails
     end
+  end
+
+  config.after(:each, type: :feature) do
+    Warden.test_reset!
   end
 end
